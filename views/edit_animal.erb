@@ -29,7 +29,7 @@
     <label for="owner_id">New Owner:</label>
     <select name="owner_id" id="owner_id">
       <% @owners.each do |owner| %>
-      <option value="<%= owner.id %>"><%= owner.first_name %></option>
+      <option value="<%= owner.id %>"><%= owner.full_name %></option>
       <% end %>
     </select>
 
