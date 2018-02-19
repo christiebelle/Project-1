@@ -1,0 +1,7 @@
+<a href="/owners/new">Add New Owner</a>
+
+<% @owners.each do |owner| %>
+  <p>First Name: <%= owner.first_name %></p>
+  <p>Last Name: <%= owner.last_name %></p>
+  <br>
+<% end %>
