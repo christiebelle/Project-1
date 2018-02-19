@@ -43,23 +43,29 @@ post "/owners/new" do
   redirect to "/owners"
 end
 
+#delete animals
+post '/animals/:id/delete' do
+  Animal.delete(params[:id])
+  redirect to "/animals"
+end
 
+#delete owners
+post '/animals/:id/delete' do
+  Owner.delete(params[:id])
+  redirect to "/owners"
+end
 
+#update animals
+get '/animals/:id/edit' do
+  @animal = Animal.find(params[:id])
+  @type = ["Cat", "Dog"]
+  @owners = Owner.all()
+  @adoptable = ["Yes", "No - Vet Care Needed", "No - Training Needed"]
+  erb(:edit_animal)
+end
 
-#delete
-# post '/pizza-orders/:id/delete' do
-#   PizzaOrder.delete(params[:id])
-#   redirect to "/pizza-orders"
-# end
-#
-# get '/pizza-orders/:id/edit' do
-#   @order = PizzaOrder.find(params[:id])
-#   @toppings = ["Margherita", "Vegetarian", "Italian Sausage", "Pepperoni"]
-#   erb(:edit)
-# end
-#
-# post '/pizza-orders/:id' do
-#   order = PizzaOrder.new(params)
-#   order.update()
-#   redirect to "/pizza-orders"
-# end
+post '/animals/:id/edit' do
+  pet = Animal.new(params)
+  pet.update
+  redirect to "/owners"
+end

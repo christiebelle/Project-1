@@ -1,7 +1,10 @@
 <a href="/owners/new">Add New Owner</a>
 
 <% @owners.each do |owner| %>
-  <p>First Name: <%= owner.first_name %></p>
-  <p>Last Name: <%= owner.last_name %></p>
+<p>First Name: <%= owner.first_name %></p>
+<p>Last Name: <%= owner.last_name %></p>
+<p>Pets: <% owner.pets.each do |pet| %>
+  <p><%= pet.name %></p>
+  <% end %>
   <br>
-<% end %>
+  <% end %>

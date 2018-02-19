@@ -1,0 +1,38 @@
+<form action="/animals/<%= @animal.id %>/edit" method="post">
+  <label for="name">Name:</label>
+    <input type="text" name="name" id="name" value="<%= @animal.name %>"/>
+
+  <label for="type">Type:</label>
+    <select name="type" id="type">
+    <% for type in @type %>
+      <option value="<%= type %>"
+      <%= "selected" if type == @animal.type %>
+      ><%= type %></option>
+      <% end %>
+  </select>
+
+  <label for="breed">Type:</label>
+    <input type="text" name="breed" id="breed" value="<%= @animal.breed %>"/>
+
+  <label for="adoptable">Adoptable:</label>
+      <select name="adoptable" id="adoptable">
+      <% for options in @adoptable %>
+        <option value="<%= options %>"
+        <%= "selected" if options == @animal.adoptable %>
+        ><%= options %></option>
+        <% end %>
+    </select>
+
+    <label for="admission">Admission date:</label>
+    <input type="date" name="admission"/>
+
+    <label for="owner_id">New Owner:</label>
+    <select name="owner_id" id="owner_id">
+      <% @owners.each do |owner| %>
+      <option value="<%= owner.id %>"><%= owner.first_name %></option>
+      <% end %>
+    </select>
+
+    <input type="submit" value="Edit Record">
+
+</form>
