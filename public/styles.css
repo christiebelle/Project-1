@@ -6,6 +6,7 @@ html {
   height: 100%;
   width: 100%;
   color: #2C1A1D;
+  font-family: 'Indie Flower', cursive;
 }
 
 nav ul {
@@ -16,6 +17,7 @@ nav li {
   flex-direction: space-around;
   width: 14%;
   list-style: none;
+  font-family: 'Indie Flower', cursive;
 }
 
 a, a:link, a:visited {
@@ -63,14 +65,17 @@ form.catanddog {
 }
 
 h1 {
-  font-family: 'Tangerine', serif;
-  margin-left: 750px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 40px;
+  color:#8B575C;
+  margin-left: 775px;
   margin-top: 10px;
   margin-bottom: 0px;
 }
 
 div.history {
-  font-family: Tahoma;
+  font-family: 'Indie Flower', cursive;
+  color: #C98986;
   width: 400px;
   margin-top: -5px;
   margin-left: 800px;
