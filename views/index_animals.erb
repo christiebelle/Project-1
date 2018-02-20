@@ -1,12 +1,15 @@
 <a href="/animals/new">Add New Animal</a>
 
 <% @animals.each do |animal| %>
-  <p>Name: <%= animal.name %></p>
-  <p>Type: <%= animal.type %></p>
-  <p>Breed: <%= animal.breed %></p>
-  <p>Adoptable: <%= animal.adoptable %></p>
-  <p>Admission Date: <%= animal.admission %></p>
-  <a href="/animals/<%= animal.id %>/edit">Assign To Owner</a>
+<p>Name: <%= animal.name %></p>
+<p>Type: <%= animal.type %></p>
+<p>Breed: <%= animal.breed %></p>
+<p>Adoptable: <%= animal.adoptable %></p>
+<p>Admission Date: <%= animal.admission %></p>
+<img height="150px" src="<%= animal.photo %>" alt="<%= animal.name %>">
+<br>
+<a href="/animals/<%= animal.id %>/edit">Assign To Owner</a>
 
-  <br>
+<br>
+<br>
 <% end %>

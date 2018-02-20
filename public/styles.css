@@ -1,0 +1,77 @@
+html {
+  background: url(./images/homepage.jpg) no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  color: #2C1A1D;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav li {
+  flex-direction: space-around;
+  width: 14%;
+  list-style: none;
+}
+
+a, a:link, a:visited {
+  color: #6C534E;
+}
+
+a:hover, a:active, a:focus {
+  color: #A67F8E;
+}
+
+html.dog {
+  background: url(./images/dog.jpg) no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  color: #2C1A1D;
+}
+
+html.cat {
+  background: url(./images/cat.jpg) no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  color: #2C1A1D;
+}
+
+html.catanddog, form.catanddog {
+  background: url(./images/catanddog.jpg) no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+  color: #2C1A1D;
+}
+
+form.catanddog {
+  display: flex;
+  justify-content: center;
+  margin-top: 550px;
+}
+
+h1 {
+  font-family: 'Tangerine', serif;
+  margin-left: 750px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+div.history {
+  font-family: Tahoma;
+  width: 400px;
+  margin-top: -5px;
+  margin-left: 800px;
+}

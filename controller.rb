@@ -11,22 +11,26 @@ end
 
 #index animals
 get '/animals' do
+  @bodyclass = "dog"
   @animals = Animal.all()
   erb(:index_animals)
 end
 
 #index owners
 get '/owners' do
+  @bodyclass = "cat"
   @owners = Owner.all()
   erb(:index_owners)
 end
 
 #create new animal
 get "/animals/new" do
+  @bodyclass = "catanddog"
   erb(:new_pet)
 end
 
 post "/animals/new" do
+  @bodyclass = "catanddog"
   new_pet = Animal.new(params)
   new_pet.save()
   redirect to "/animals"
@@ -34,6 +38,7 @@ end
 
 #create new owner
 get "/owners/new" do
+  @bodyclass = "catanddog"
   erb(:new_owner)
 end
 
@@ -57,6 +62,7 @@ end
 
 #update animals
 get '/animals/:id/edit' do
+  @bodyclass = "catanddog"
   @animal = Animal.find(params[:id])
   @type = ["Cat", "Dog"]
   @owners = Owner.all()
